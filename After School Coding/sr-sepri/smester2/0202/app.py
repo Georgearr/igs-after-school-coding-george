@@ -17,7 +17,7 @@ def home():
 
 @app.route('/admin')
 def admin():
-    if 'user' in session:
+    if session["user"]:
         return render_template('admin.html')
     return redirect(url_for('home'))
 
