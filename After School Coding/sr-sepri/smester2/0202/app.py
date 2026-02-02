@@ -17,11 +17,11 @@ def home():
 
 @app.route('/admin')
 def admin():
-    if session["user"]:
+    if session.get("user"):
         return render_template('admin.html')
-    return redirect(url_for('/'))
+    return redirect(url_for('home'))
 
-@app.route("logout")
+@app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for('home'))
