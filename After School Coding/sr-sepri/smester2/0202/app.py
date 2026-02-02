@@ -19,6 +19,11 @@ def home():
 def admin():
     if session["user"]:
         return render_template('admin.html')
+    return redirect(url_for('/'))
+
+@app.route("logout")
+def logout():
+    session.clear()
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
