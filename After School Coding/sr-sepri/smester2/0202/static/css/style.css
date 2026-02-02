@@ -37,3 +37,6 @@ body, html {
     border-radius: 4px;
     cursor: pointer;
 }
+.container-login button:hover {
+    background-color: #244bb5;
+}
