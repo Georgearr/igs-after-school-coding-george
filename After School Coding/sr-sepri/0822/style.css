@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Open Sauce";
+  src: url(OpenSauceOne/OpenSauceOne-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sauce";
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+header {
+  padding: 1rem;
+}
+nav {
+  background-color: darkgray;
+  padding: 1rem;
+}
+nav {
+  background-color: darkgray;
+  padding: 1rem;
+}
+section {
+  background-color: gray;
+  padding: 1rem;
+}
+article {
+  background-color: lightgray;
+  padding: 1rem;
+}
+aside {
+  background-color: darkgray;
+  padding: 1rem;
+}
+footer {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+}

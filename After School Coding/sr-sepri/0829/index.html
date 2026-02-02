@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'OpenSauceOne';
+            src: url("OpenSauceOne/OpenSauceOne-Light.ttf") format("opentype");
+        }
+
+        *{
+            font-family: 'OpenSauceOne';
+        }
+        body {
+            background-color: black;
+        }
+        #id {
+            color: black;
+            background-color: white;
+            width: 20vh;
+            height: 20vh;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .content {
+            width: 80%;
+        }
+        .bawah {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 5px 10px 5px;
+            background-color: white;
+            border: none;
+            border-radius: 50px;
+            width: 15rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header style="color: white;">
+        <h1>Setiker jomok kreator</h1>
+        <h2>Terverifikasi mas rusdi ambatakam</h2>
+        <div id="id">
+            <div class="content">
+                <h2 id="text">stimker wangsaf</h2>
+            </div>
+        </div>
+        <button onclick="buwat()">
+            buwat stimker wangsaf
+        </button>
+        <h3>"Kalau memang gabisa, yaudah. Relain aja. Bakal ada yang lebih baik, kok!"</h3>
+        <p>~ admin mengsad</p>
+        <div class="bawah">
+            <p>Tapi, kalau kamu ga mampu ngelepasin dia, sampai kapanpun kamu bakal terjebak.</p>
+        </div>
+    </header>
+        
+    <script>
+        function buwat() {
+            x = prompt("Admin berkata masukkan teks:")
+            if (x !== null) {
+                document.getElementById("text").textContent = x;
+            } else {
+                alert('woilah cik disuruh isi malah ndak ngisi. ngamkak cik')
+            }
+            if (x !== null && x.length > 20) {
+                document.getElementById("text").style.fontSize = "1rem";
+            } else {
+                document.getElementById("text").style.fontSize = "";
+            }
+            document.getElementById("text").style.wordBreak = "break-word";
+            document.getElementById("text").style.whiteSpace = "normal";
+            document.getElementById("text").style.overflowWrap = "break-word";
+            document.getElementById("text").style.textAlign = "left";
+            
+            if (x !== null && x.length > 40) {
+                document.getElementById("text").style.fontSize = "0.8rem";
+            }
+        }
+    </script>
+</body>
+</html>

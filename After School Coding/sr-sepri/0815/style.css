@@ -1,0 +1,36 @@
+body {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container {
+    background-color: white;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: flex-start;
+}
+.box1 {
+    background-color: red;
+    margin: 20px 30px 30px;
+    padding: 50px;
+    height: 100px;
+    border-style: double;
+    border-color: tomato;
+    border-radius: 20%;
+}
+.box2 {
+    background-color: green;
+    margin: 20px 30px 30px;
+    padding: 50px;
+    border-radius: 50%;
+    flex: 2;
+}
+.box3 {
+    background-color: blue;
+    margin: 20px 30px 30px;
+    padding: 50px;
+    flex: 3;
+}

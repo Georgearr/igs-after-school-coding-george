@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Welcome to the Beranda Page</h1>
+<p>This is the main landing page of the website.</p>
+
+{% if nilai >= 80 and nilai <= 100 %}
+    <p>Grade: A</p>
+{% elif nilai >= 70 and nilai < 80 %}
+    <p>Grade: B</p>
+{% elif nilai >= 60 and nilai < 70 %}
+    <p>Grade: C</p>
+{% elif nilai >= 50 and nilai < 60 %}
+    <p>Grade: D</p>
+{% elif nilai >= 0 and nilai < 50 %}
+    <p>Grade: E</p>
+{% else %}
+    <p>Invalid score</p>
+{% endif %}
+
+{% endblock %}

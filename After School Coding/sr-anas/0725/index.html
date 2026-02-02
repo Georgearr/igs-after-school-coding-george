@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHello() {
+            const message = "Hello World";
+            alert(message);
+            document.getElementById("tes").innerText = message;
+        }
+        function sayGoodbye() {
+            alert("Goodbye, ....!")
+        }
+    </script>
+</head>
+<body>
+    <p id="tes">Tes</p>
+    <button onclick="sayHello()">Click Me</button>
+    <button onclick="sayGoodbye()">Easter Egg</button>
+</body>
+</html>
