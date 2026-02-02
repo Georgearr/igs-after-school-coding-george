@@ -11,8 +11,8 @@ def home():
         username = request.form['username']
         password = request.form['password']
         if username == usernameKey and password == passwordKey:
-            session['user'] = True
-            return render_template('admin.html')
+            session['user'] = username
+            return redirect(url_for('admin'))
     return render_template('home.html')
 
 @app.route('/admin')
