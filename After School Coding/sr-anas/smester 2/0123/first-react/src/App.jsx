@@ -1,19 +1,16 @@
-import Header from './components/Header';
-import Hero from './components/Hero/index';
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
-function App() {
+function App(){
+
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <div>
-        <Hero />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <h1>Hello, react!</h1>
+      <Header />
+      <Hero />
     </>
+    
+
   )
 }
 
