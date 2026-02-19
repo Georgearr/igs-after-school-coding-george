@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+header, h1 {
+    text-align: center;
+    color: rgb(164, 23, 23);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: aqua;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Form Biodata</h1>
+    </header>
+    <main>
+        <form action="" method="POST">
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama" required>
+            <label for="kelas">Kelas</label>
+            <input type="number" name="kelas" id="kelas" min="10" max="12" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <fieldset>
+                <legend>Tempat, Tanggal Lahir</legend>
+                <label for="tempat">Tempat</label>
+                <input type="text" name="tempat" id="tempat" required>
+                <label for="tgl">Tanggal</label>
+                <input type="date" name="tgl" id="tgl">
+            </fieldset>
+
+            <fieldset>
+                <legend>Cita-cita</legend>
+                <label for="programmer">Programmer</label>
+                <input type="radio" name="cita-cita" id="programmer" value="Programmer">
+                <label for="programmer1">Non-Programmer</label>
+                <input type="radio" name="cita-cita" id="programmer1" value="Non Programmer">
+            </fieldset>
+
+            <label for="agama">Agama</label>
+            <select name="agama" id="agama" required>
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="buddha">Buddha</option>
+                <option value="hindu">Hindu</option>
+                <option value="konghucu">Konghucu</option>
+            </select>
+
+            <label for="tentang">Tentang</label>
+            <textarea name="tentantg" id="tentang"></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </main>
+</body>
+</html>
