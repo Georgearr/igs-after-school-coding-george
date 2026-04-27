@@ -3,13 +3,24 @@ import { notes } from "../data/notes.js";
 
 export const createNote = (req, res) => {
   const { title, content } = req.body;
-  const newNote = {
-    id: nanoid(),
-    title,
-    content,
-  };
+  const id = nanoid(16);
+  const createdAt = new Date().toISOString();
+  const updatedAt = createdAt;
+  const newNote = { id, title, content, createdAt, updatedAt };
   notes.push(newNote);
-  res.json(newNote);
+  const isSuccess = notes.find((note) => note.id === id);
+  if (isSuccess) {
+    return res.status(201).json({
+      message: "Note created successfully",
+      note: newNote,
+      data: { noteId: id }
+    });
+  }
+
+  return res.status(500).json({
+    status: "fail",
+    message: "Failed to create note"
+    });
 };
 
 export const getNotes = (_, res) => {
