@@ -24,14 +24,25 @@ export const createNote = (req, res) => {
 };
 
 export const getNotes = (_, res) => {
-  res.json(notes);
+  return res.json({
+    status: "success",
+    data : { notes }
+  });
 };
 
 export const getNoteById = (req, res) => {
   const { id } = req.params;
   const note = notes.find((note) => note.id === id);
-  if (!note) {
-    return res.status(404).json({ message: "Note not found" });
+  if (note) {
+    return res.json({
+      status: "success",
+      data: { note }
+    });
+
+    return res.status(404).json({
+      status: "fail",
+      message: "Catatan tidak Ditemukan"
+    })
   }
   res.json(note);
 };
