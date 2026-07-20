@@ -4,7 +4,7 @@ import cors from "cors";
 import routes from "./routes/routes.js";
 
 const app = express();
-const PORT = 5000; 
+const PORT = 8000; 
 
 app.use(cors({
     origin: "http://localhost:8080"
